@@ -32,10 +32,6 @@ app.set("views", path.join(__dirname, "views"));
 app.locals.pretty = (NODE_ENV !== 'production'); // Indente correctement le HTML envoyé au client (utile en dev, mais inutile en production)
 app.use(express.static(path.join(__dirname, "public")));
 
-// ==========
-// App middlewares
-// ==========
-
 
 // ==========
 // App routers

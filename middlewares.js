@@ -3,9 +3,10 @@ import UserModel from './Models/User.js';
 
 export const authMiddleware = (req, res, next) => {
 
-    // if req.session.user is not set, redirect to login
+    
     const sessionToken = req.session.token;
 
+    // si pas de sessinToken alors on redirige vers la page de login
     if (!sessionToken) {
         res.redirect("/api/login");
     }
