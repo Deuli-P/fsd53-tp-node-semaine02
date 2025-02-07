@@ -3,8 +3,11 @@ extends layouts/frontend
 block content 
     .ui.middle.aligned.center.aligned.grid
         .six.wide.column
-            p Bienvenue sur votre Dashboard #{user.firstname}
 
-            form(method='get', action='/api/logout')
-                button(type='submit').ui.fluid.large.teal.submit.button Logout
+            .ui.positive.message 
+                |   Connexion réuissie ! Heureux de vous revoir #{user.firstname}
 
+            h1 Dashboard 
+
+            
+            p Bienvenue sur votre Dashboard personnel #{user.firstname} #{user.lastname}

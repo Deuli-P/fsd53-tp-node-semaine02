@@ -60,7 +60,7 @@ export const postRegister = async (req, res) => {
         console.log("newUser créé")
         await newUser.save()
 
-        res.status(201).redirect("/login");
+        res.status(201).redirect("/api/login");
 
     }
     catch (error) {

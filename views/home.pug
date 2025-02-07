@@ -3,6 +3,11 @@ extends layouts/frontend
 block content
     .ui.middle.aligned.center.aligned.grid
         .six.wide.column
+
+            h1 Inscription
+            if message
+                .ui.error.message= message
+                
             form.ui.large.form(method="post", action="/api/register")
                 .ui.stacked.segment
                     +field('text', 'firstName', 'First name')
@@ -12,8 +17,6 @@ block content
                     +field('password', 'password_confirm', 'Confirm password')
                     button(type="submit").ui.fluid.large.teal.submit.button Register
 
-            if message
-                .ui.error.message= message
 
 
 mixin field(type, name, placeholder)
