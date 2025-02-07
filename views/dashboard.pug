@@ -1,0 +1,10 @@
+extends layouts/frontend
+
+block content 
+    .ui.middle.aligned.center.aligned.grid
+        .six.wide.column
+            p Bienvenue sur votre Dashboard #{user.firstname}
+
+            form(method='get', action='/api/logout')
+                button(type='submit').ui.fluid.large.teal.submit.button Logout
+
